@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import ListingCard from "../components/ListingCard";
@@ -67,17 +67,7 @@ function Home() {
     fetchListings();
   }, []);
 
-  const featuredListings = useMemo(() => {
-    const byId = new Map(allListings.map((l) => [l.id, l]));
-
-    const curated = FEATURED_IDS
-      .map((id) => byId.get(id))
-      .filter(Boolean) as Listing[];
-
-    const remaining = allListings.filter((l) => !FEATURED_IDS.includes(l.id));
-
-    return [...curated, ...remaining].slice(0, 10);
-  }, [allListings]);
+     const featuredListings = allListings.filter((l) => FEATURED_IDS.includes(l.id));
 
   return (
     <div className="min-h-screen bg-white">

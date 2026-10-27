@@ -4,14 +4,14 @@ export interface Listing {
   city: string;
   country: string;
 
-  // max number of participants the venue can handle
+  
   participants: number;
 
-  // pricing
+  
   pricePerDay?: number;
   pricePerHour?: number;
 
-  // conference-focused listing types
+  
   type: "conference" | "hybrid";
 
   amenities: string[];
@@ -26,13 +26,13 @@ export interface Booking {
 
   kind: "conference";
 
-  // date + times
+  
   date: string;
   startTime: string;
   endTime: string;
   totalHours: number;
 
-  // kept for compatibility with existing pages
+  
   from: string;
   to: string;
 

@@ -115,7 +115,7 @@ const Results = () => {
       <section className="bg-[#E3ECFF] pt-1 pb-4">
         <SearchBar
           onSubmit={handleSearch}
-          initialPlace={place || "t.ex. Stockholm, Göteborg, Malmö."}
+          initialPlace={place}
           initialFrom={from}
           initialTo={to}
           initialParticipants={participantsParam > 0 ? participantsParam : 1}
@@ -176,12 +176,6 @@ const Results = () => {
               />
             ))}
           </div>
-        )}
-
-        {!loading && !error && isFeaturedMode && featuredListings.length < 10 && (
-          <p className="mt-8 text-sm text-gray-500">
-            Tips: Kontrollera att dina featured-ID:n finns i seed-datan.
-          </p>
         )}
       </section>
     </div>

@@ -1,44 +1,65 @@
-# NordStay – Webbapplikation för bokning av boenden
+# NordStay
 
-NordStay är en webbapplikation där användare kan söka boenden, se detaljer, göra bokningar och se sina bokningar.  
-Projektet är byggt som en fullstack-applikation med React i frontend och Node.js/Express i backend.
+NordStay är en webbapplikation där man kan söka och boka konferenslokaler i Stockholm, Göteborg och Malmö. Man kan söka lokaler, se detaljer och bilder, välja datum, tid och antal deltagare, boka och se sina bokningar.
+
+Projektet har en frontend i React och en backend i Node.js/Express.
 
 ## Tekniker
-### Frontend
-- React + Vite
-- TypeScript
-- React Router
-- Tailwind CSS
-- Axios för API-anrop
 
-### Backend
-- Node.js
-- Express
-- TypeScript
-- In-memory data (för Godkänt-nivå)
+Frontend: React, Vite, TypeScript, React Router, Tailwind CSS
 
----
+Backend: Node.js, Express, TypeScript, bcryptjs, jsonwebtoken
 
-## Funktionalitet
-- Sök boenden baserat på plats
-- Visa lista med boenden
-- Visa detaljsida för boende
-- Skapa bokning
-- Visa bekräftelse efter bokning
-- Visa användarens bokningar
-- CRUD för boenden (läs & skapa)
+## Starta projektet
 
----
-Projekt struktur 
+Du behöver Node.js 20.19 eller senare.
 
-client/
-  src/
-    components/
-    pages/
-    routes/
-    utils/
+Starta backend (port 4000):
 
-server/
-  src/
-    routes/
-    data/
+```
+cd server
+npm install
+npm run dev
+```
+
+Starta frontend i ett nytt terminalfönster (port 5173):
+
+```
+cd client
+npm install
+npm run dev
+```
+
+Öppna sedan http://localhost:5173 i webbläsaren.
+
+## Demoanvändare
+
+- demo@nordstay.se / password
+- admin@nordstay.se / password
+
+Du kan också registrera ett eget konto.
+
+## Funktioner
+
+- Sök konferenslokaler på stad
+- Resultatlista och detaljsida med bilder
+- Välj datum, tid och antal deltagare
+- Bokningsöversikt, bokning och bekräftelse
+- Mina bokningar
+- Registrera, logga in och logga ut
+
+## Data
+
+Lokalerna ligger i `server/src/data/listings.ts`. Registrerade användare och bokningar sparas bara i minnet och försvinner när servern startas om. Demoanvändarna finns alltid.
+
+## Mappstruktur
+
+```
+client/src   components, pages, routes, utils, types
+server/src   routes, data, models
+```
+
+## Dokumentation
+
+- `TECH_DOCUMENTATION.md` – teknisk beskrivning av projektet
+- `MANUAL_TESTS.md` – manuella tester

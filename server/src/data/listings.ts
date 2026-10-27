@@ -547,7 +547,7 @@ export const listings: Listing[] = [
       "/images/malmo/mjs-hotel/2.jpeg",
       "/images/malmo/mjs-hotel/3.jpeg",
       "/images/malmo/mjs-hotel/4.jpeg",
-      "/images/malmo/mjs-hotel/5.jpeg",
+      "/images/malmo/mjs-hotel/6.jpeg",
     ],
   },
   {

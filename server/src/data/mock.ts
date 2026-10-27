@@ -1,8 +1,8 @@
+// Demo users (Password: password)
 import bcrypt from "bcryptjs";
 import type { User } from "../models/types";
 
-// Permanent demo users for development and school testing
-// Password for both users: password
+// Passwords: password
 export const users: User[] = [
   {
     id: "user-demo-1",
